@@ -9,8 +9,10 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
+import { useTranslations } from "next-intl";
 
 export function ModeToggle() {
+  const tHeader = useTranslations("HomePage.Header");
   const { setTheme } = useTheme();
 
   return (
@@ -33,19 +35,19 @@ export function ModeToggle() {
           onClick={() => setTheme("light")}
           className="w-full mx-auto flex justify-center items-center"
         >
-          Light
+          {tHeader("light")}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("dark")}
           className="w-full mx-auto flex justify-center items-center"
         >
-          Dark
+          {tHeader("dark")}
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => setTheme("system")}
           className="w-full mx-auto flex justify-center items-center"
         >
-          System
+          {tHeader("system")}
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

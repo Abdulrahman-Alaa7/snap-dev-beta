@@ -11,39 +11,49 @@ import SocialMedia from "../public/assets/social-media.webp";
 import Shopify from "../public/assets/shopify.webp";
 import Wordpress from "../public/assets/wordpress.webp";
 import techSupport from "../public/assets/tech-support.webp";
+import { useLocale, useTranslations } from "next-intl";
 
 type Props = {};
 
-const carouselItemsHomeServices = [
-  { text: "Ecommerce", colors: "from-green-500 to-emerald-600" },
-  { text: "AI", colors: "from-sky-600 to-sky-500" },
-  { text: "Portfolio", colors: "from-red-500 to-pink-600" },
-  { text: "Blog", colors: "from-amber-600 to-yellow-600" },
-  { text: "SaaS", colors: "from-rose-500 to-pink-500" },
-  { text: "Realtime Apps", colors: "from-teal-400 to-cyan-500" },
-  { text: "Documentation", colors: "from-violet-600 to-blue-500" },
-];
-
-const imagesHomeServices = [
-  { src: FullStackMain, alt: "Full Stack App", title: "Full Stack App" },
-  {
-    src: SocialMedia,
-    alt: "Social media growth and engagement",
-    title: "Social Media Growth",
-  },
-  { src: Shopify, alt: "Shopify", title: "Shopify" },
-  { src: Wordpress, alt: "Wordpress", title: "Wordpress" },
-  { src: techSupport, alt: "Tech Support", title: "Technical Support" },
-];
-
 const FullServices = (props: Props) => {
+  const lang = useLocale();
+  const tServices = useTranslations("HomePage.FullServices");
+  const carouselItemsHomeServices = [
+    { text: "Ecommerce", colors: "from-green-500 to-emerald-600" },
+    { text: "AI", colors: "from-sky-600 to-sky-500" },
+    { text: "Portfolio", colors: "from-red-500 to-pink-600" },
+    { text: "Blog", colors: "from-amber-600 to-yellow-600" },
+    { text: "SaaS", colors: "from-rose-500 to-pink-500" },
+    { text: "Realtime Apps", colors: "from-teal-400 to-cyan-500" },
+    { text: "Documentation", colors: "from-violet-600 to-blue-500" },
+  ];
+
+  const imagesHomeServices = [
+    {
+      src: FullStackMain,
+      alt: "Full Stack App",
+      title: `${tServices("fullStack")}`,
+    },
+    {
+      src: SocialMedia,
+      alt: "Social media growth and engagement",
+      title: `${tServices("SocialMedia")}`,
+    },
+    { src: Shopify, alt: "Shopify", title: `${tServices("shopify")}` },
+    { src: Wordpress, alt: "Wordpress", title: `${tServices("wordpress")}` },
+    {
+      src: techSupport,
+      alt: "Tech Support",
+      title: `${tServices("techSupport")}`,
+    },
+  ];
   return (
     <section>
-      <h2 className="gradient-text scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-3 mt-12">
-        Build with Snap Dev.
+      <h2 className="gradient-text scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-3 mt-8">
+        {tServices("title")} <span className="font-sans">Snap Dev</span>.
       </h2>
       <p className="text-center font-[400] text-gray-700 leading-loose text-sm sm:text-[18px] px-2 dark:text-[#939db6] mb-4">
-        Full-service digital agency
+        {tServices("desc")}
       </p>
 
       <div className="mx-auto w-[50%] sm:w-[40] md:w-[30%] px-6 text-center mb-3">
@@ -54,6 +64,7 @@ const FullServices = (props: Props) => {
               stopOnInteraction: false,
             }),
           ]}
+          dir="ltr"
         >
           <CarouselContent>
             {carouselItemsHomeServices.map((item, index) => (
@@ -81,8 +92,12 @@ const FullServices = (props: Props) => {
                 className="absolute inset-0 object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-              <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
+              <div className="absolute inset-0 bg-black/30"></div>
+              <h3
+                className={`z-10 text-2xl font-medium text-white absolute top-0 ${
+                  lang === "ar" ? "right-0" : "left-0"
+                } p-4 xs:text-xl md:text-3xl`}
+              >
                 {imagesHomeServices[0].title}
               </h3>
             </div>
@@ -97,8 +112,12 @@ const FullServices = (props: Props) => {
                 className="absolute object-cover inset-0 group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-              <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
+              <div className="absolute inset-0 bg-black/30"></div>
+              <h3
+                className={`z-10 text-2xl font-medium text-white absolute top-0 ${
+                  lang === "ar" ? "right-0" : "left-0"
+                } p-4 xs:text-xl md:text-3xl`}
+              >
                 {imagesHomeServices[1].title}
               </h3>
             </div>
@@ -116,8 +135,12 @@ const FullServices = (props: Props) => {
                     className="absolute object-cover inset-0 group-hover:scale-105 transition-transform duration-500 ease-in-out"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-                  <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
+                  <div className="absolute inset-0 bg-black/30"></div>
+                  <h3
+                    className={`z-10 text-2xl font-medium text-white absolute top-0 ${
+                      lang === "ar" ? "right-0" : "left-0"
+                    } p-4 xs:text-xl md:text-3xl`}
+                  >
                     {imagesHomeServices[index].title}
                   </h3>
                 </div>
@@ -134,8 +157,12 @@ const FullServices = (props: Props) => {
                 className="absolute object-cover inset-0 group-hover:scale-105 transition-transform duration-500 ease-in-out"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-b from-gray-900/25 to-gray-900/5"></div>
-              <h3 className="z-10 text-2xl font-medium text-white absolute top-0 left-0 p-4 xs:text-xl md:text-3xl">
+              <div className="absolute inset-0 bg-black/30"></div>
+              <h3
+                className={`z-10 text-2xl font-medium text-white absolute top-0 ${
+                  lang === "ar" ? "right-0" : "left-0"
+                } p-4 xs:text-xl md:text-3xl`}
+              >
                 {imagesHomeServices[4].title}
               </h3>
             </div>
@@ -152,7 +179,7 @@ const FullServices = (props: Props) => {
           className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full
             px-7 text-sm font-medium backdrop-blur-3xl gap-2 bg-slate-900 text-white dark:text-slate-950 dark:bg-[#fff]`}
         >
-          Explore more
+          {tServices("linkTech")}
           <MousePointer2 size={18} className="rotate-90" />
         </span>
       </Link>

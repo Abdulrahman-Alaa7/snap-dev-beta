@@ -6,10 +6,12 @@ import { Link, usePathname } from "../i18n/routing";
 import { ModeToggle } from "./ModeToggle";
 import { Boxes, CircleUser, Cpu, House, LayoutGrid, Send } from "lucide-react";
 import LangToggle from "./LangToggle";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const Header: FC<Props> = () => {
+  const tHeader = useTranslations("HomePage.Header");
   const [active, setActive] = useState(false);
   const [isBottom, setIsBottom] = useState(false);
 
@@ -34,32 +36,32 @@ const Header: FC<Props> = () => {
   const linksData = [
     {
       url: "/",
-      text: `Home`,
+      text: `${tHeader("home")}`,
       icon: <House size={20} />,
     },
     {
       url: "/work",
-      text: `Work`,
+      text: `${tHeader("work")}`,
       icon: <LayoutGrid size={20} />,
     },
     {
       url: "/about",
-      text: `About`,
+      text: `${tHeader("about")}`,
       icon: <CircleUser size={20} />,
     },
     {
       url: "/technology",
-      text: `Technology`,
+      text: `${tHeader("tech")}`,
       icon: <Cpu size={20} />,
     },
     {
       url: "/services",
-      text: `Services`,
+      text: `${tHeader("services")}`,
       icon: <Boxes size={20} />,
     },
     {
       url: "/contact-us",
-      text: `Contact`,
+      text: `${tHeader("contact")}`,
       icon: <Send size={20} />,
     },
   ];

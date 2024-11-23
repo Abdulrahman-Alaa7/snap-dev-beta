@@ -1,6 +1,99 @@
 {
   "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
+    "Header": {
+      "home": "Home",
+      "work": "Work",
+      "about": "About",
+      "tech": "Technology",
+      "services": "Services",
+      "contact": "Contact",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "Footer": {
+      "quickLinks": "Quick Links",
+      "contactFooter": "Contact",
+      "location": " Cairo, Egypt",
+      "tooltipFacebook": "Follow On Facebook",
+      "tooltipInstagram": "Follow On Instagram",
+      "tooltipTiktok": "Follow On TikTok",
+      "tooltipLinkedIn": "Follow On LinkedIn",
+      "lastPFooter": "Build your vision with"
+    },
+    "Hero": {
+      "title": "Snapping Ideas to Reality",
+      "desc": {
+        "p1": "Pro tools created with",
+        "p2": "businesses",
+        "p3": "in mind"
+      }
+    },
+    "WhyUs": {
+      "title": "Your vision, our technology. Web and app development, tailored to you",
+      "h1": "Domain & Hosting",
+      "p1": "Reliable hosting, top-tier domains. Your website, protected.",
+      "h2": "AI-Powered",
+      "p2": "AI-powered growth for your business. Future-proof your business with AI.",
+      "h3": "Modern & Professional Design",
+      "p3": "Creating stunning, modern websites that leave a lasting impression.",
+      "h4": "Secure Your Business",
+      "p4": "Your data is safe with our advanced security measures.",
+      "h5": "High-Performance",
+      "p5": "Experience unparalleled speed and efficiency with our expertly crafted websites.",
+      "h6": "Built to Perfection",
+      "p6": "Our websites are meticulously designed and developed following industry best practices.",
+      "h7": "Accessible to All",
+      "p7": "Our websites are inclusive and accessible to all, regardless of abilities.",
+      "h8": "SEO Optimized",
+      "p8": "Our SEO-optimized websites will help you rank higher in search engine results.",
+      "analytics": {
+        "title": "In-depth Analytics and Insights",
+        "p1": "Uncover valuable data to drive your business forward",
+        "p2": "Our comprehensive analytics suite provides you with deep insights into the performance of your applications. Gain a clear understanding of your users'behavior, track key metrics, and make data-driven decisions to optimize your products.",
+        "linkAnalytics": "More details",
+        "jan": "January",
+        "feb": "February",
+        "mar": "March",
+        "apr": "April",
+        "may": "May",
+        "jun": "June",
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "desc": "Trending up by 5.2% this month"
+      }
+    },
+    "Support": {
+      "title": "Your vision, our passion.",
+      "h1": "Dedicated Support",
+      "p1": "Benefit from our dedicated support team available to assist you 24/7.",
+      "h2": "Quick Response Times",
+      "p2": "Experience rapid response times to your inquiries and issues.",
+      "h3": "Clear Communication",
+      "p3": "Our team communicates clearly and effectively, ensuring you always understand the status of your project.",
+      "h4": "Proactive Support",
+      "p4": "We proactively identify and address potential issues before they impact your business."
+    },
+    "FullServices": {
+      "title": "Build with ",
+      "desc": " Full-service digital agency",
+      "fullStack": "Full Stack App",
+      "SocialMedia": "Social media growth",
+      "wordpress": "Wordpress",
+      "shopify": "Shopify",
+      "techSupport": "Technical Support",
+      "linkTech": "Explore more"
+    },
+    "SomeWork": {
+      "title": "Your Best Choice, Every Time.",
+      "h1": "Building Beyond Limits",
+      "p1": "We build robust, scalable, and high-performing applications using the latest technologies like Node.js, Next.js, and GraphQL. Our team of experienced engineers delivers custom solutions tailored to your specific needs.",
+      "linkWork": "Explore our works"
+    },
+    "ContactHome": {
+      "title": "Ready to take your digital presence to the next level?",
+      "desc": "Reach out to us today and let's discuss how we can help you achieve your goals.",
+      "linkContact": "Let's get in touch"
+    }
   }
 }

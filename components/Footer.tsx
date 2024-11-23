@@ -10,12 +10,14 @@ import {
 } from "./ui/tooltip";
 import { Link as LinkNav } from "../i18n/routing";
 import { Mail, MapPin, Phone } from "lucide-react";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Link from "next/link";
 import LogoFooter from "../public/assets/logo-dark.webp";
 import { FaFacebook, FaInstagram, FaTiktok, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
+  const tHeader = useTranslations("HomePage.Header");
+  const tFooter = useTranslations("HomePage.Footer");
   const lang = useLocale();
 
   const socialLinks = [
@@ -23,25 +25,25 @@ const Footer = () => {
       href: "https://www.facebook.com",
       imgSrc: <FaFacebook size={25} />,
       alt: "Facebook Logo",
-      tooltipText: `Follow On Facebook`,
+      tooltipText: `${tFooter("tooltipFacebook")}`,
     },
     {
       href: "https://www.instagram.com",
       imgSrc: <FaInstagram size={25} />,
       alt: "Instagram logo",
-      tooltipText: `Follow On Instagram`,
+      tooltipText: `${tFooter("tooltipInstagram")}`,
     },
     {
       href: "https://www.tiktok.com",
       imgSrc: <FaTiktok size={25} />,
       alt: "tiktok Logo",
-      tooltipText: `Follow On TikTok`,
+      tooltipText: `${tFooter("tooltipTiktok")}`,
     },
     {
       href: "https://www.linkedin.com/",
       imgSrc: <FaLinkedin size={25} />,
       alt: "LinkedIn Logo",
-      tooltipText: `Follow On LinkedIn`,
+      tooltipText: `${tFooter("tooltipLinkedIn")}`,
     },
   ];
 
@@ -67,7 +69,7 @@ const Footer = () => {
                 height={45}
                 className=" rounded-full"
               />
-              <p className="tracking-wide mt-1 dark:text-white font-semibold text-[22px] sm:text-[25px] bg-gradient-to-r from-slate-900 to-neutral-900 bg-clip-text text-transparent">
+              <p className="font-sans tracking-wide mt-1 dark:text-white font-semibold text-[22px] sm:text-[25px] bg-gradient-to-r from-slate-900 to-neutral-900 bg-clip-text text-transparent">
                 Snap Dev
               </p>
             </LinkNav>
@@ -99,16 +101,16 @@ const Footer = () => {
 
           <div>
             <h2 className="mb-4 flex justify-center font-semibold md:justify-start text-[20px]">
-              Quick Links
+              {tFooter("quickLinks")}
             </h2>
             <div className="flex flex-col gap-2">
               {[
-                { href: "/", text: `Home` },
-                { href: "/work", text: `Work` },
-                { href: "/about", text: `About` },
-                { href: "/technology", text: `Technology` },
-                { href: "/services", text: `Services` },
-                { href: "/contact-us", text: `Contact` },
+                { href: "/", text: `${tHeader("home")}` },
+                { href: "/work", text: `${tHeader("work")}` },
+                { href: "/about", text: `${tHeader("about")}` },
+                { href: "/technology", text: `${tHeader("tech")}` },
+                { href: "/services", text: `${tHeader("services")}` },
+                { href: "/contact-us", text: `${tHeader("contact")}` },
               ].map((link, index) => (
                 <LinkNav
                   key={index}
@@ -123,7 +125,7 @@ const Footer = () => {
 
           <div className="flex flex-col justify-center items-center md:justify-start md:items-start gap-1">
             <h2 className="text-left mb-4 flex justify-center font-semibold md:justify-start text-[20px]">
-              Contact
+              {tFooter("contactFooter")}
             </h2>
 
             <p
@@ -131,7 +133,7 @@ const Footer = () => {
               className="text-left mb-4 flex items-center justify-center md:justify-start gap-2 text-[#666] leading-loose text-[14px] dark:text-[#939db6]"
             >
               <MapPin />
-              Cairo, Egypt
+              {tFooter("location")}
             </p>
 
             <Link
@@ -155,21 +157,15 @@ const Footer = () => {
 
       <Separator />
       <div
-        className={`bg-background p-6 text-center flex justify-center items-center gap-1 ${
-          lang == "ar" && "flex-row-reverse"
-        }`}
+        className={`bg-background p-6 text-center flex justify-center items-center gap-1 `}
       >
-        <div
-          className={`flex justify-center items-center ${
-            lang == "ar" && "!flex-row-reverse"
-          } gap-1`}
-        >
+        <div className={`flex justify-center items-center  gap-1`}>
           &copy; <span>{new Date().getFullYear()}</span>
         </div>
 
         <span>
-          Build your vision with{" "}
-          <span className="font-extrabold">Snap Dev</span>.
+          {tFooter("lastPFooter")}
+          <span className="font-extrabold font-sans"> Snap Dev</span>
         </span>
       </div>
     </footer>

@@ -5,6 +5,7 @@ import { MousePointer2 } from "lucide-react";
 import ogsClient from "../public/assets/ogs-games-user.webp";
 import portfolioApp from "../public/assets/portfolio-app.webp";
 import ogsDashboard from "../public/assets/ogs-dashboard.webp";
+import { useLocale, useTranslations } from "next-intl";
 type Props = {};
 
 const imagesSomeWork = [
@@ -26,21 +27,28 @@ const imagesSomeWork = [
 ];
 
 const SomeWork = (props: Props) => {
+  const lang = useLocale();
+  const tSomeWork = useTranslations("HomePage.SomeWork");
   return (
-    <section className="overflow-hidden pb-10 pt-12 px-4 md:px-8 bg-gray-100 dark:bg-[#ffffff05]">
-      <h2 className="gradient-text text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-10">
-        Your Best Choice, Every Time.
+    <section className="overflow-hidden py-6 px-4 md:px-8 bg-gray-100 dark:bg-[#ffffff05]">
+      <h2 className="gradient-text text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-6">
+        {tSomeWork("title")}
       </h2>
       <div className="flex flex-col-reverse xl:flex-row items-center lg:justify-between">
         <div className="lg:w-1/2 text-center lg:text-left p-4 lg:p-8">
-          <h3 className="text-2xl md:text-3xl font-bold mb-4 text-gray-800 dark:text-gray-100">
-            Building Beyond Limits
+          <h3
+            className={`text-2xl md:text-3xl font-bold mb-4 ${
+              lang === "ar" && "text-center md:text-right"
+            }  text-gray-800 dark:text-gray-100`}
+          >
+            {tSomeWork("h1")}
           </h3>
-          <p className="text-gray-700 dark:text-gray-400">
-            We build robust, scalable, and high-performing applications using
-            the latest technologies like Node.js, Next.js, and GraphQL. Our team
-            of experienced engineers delivers custom solutions tailored to your
-            specific needs.
+          <p
+            className={`text-gray-700 dark:text-gray-400 ${
+              lang === "ar" && "text-center md:text-right !leading-7"
+            } `}
+          >
+            {tSomeWork("p1")}
           </p>
           <Link
             href={`/work`}
@@ -51,7 +59,7 @@ const SomeWork = (props: Props) => {
               className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full
               px-7 text-sm font-medium  backdrop-blur-3xl gap-2 bg-slate-900 text-white dark:text-slate-950 dark:bg-[#fff]`}
             >
-              Explore our work
+              {tSomeWork("linkWork")}
               <MousePointer2 size={18} className=" rotate-90" />
             </span>
           </Link>

@@ -10,31 +10,33 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "../ui/chart";
-
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig;
+import { useLocale, useTranslations } from "next-intl";
 
 export function AreaChartAnalytics() {
+  const tAnalytics = useTranslations("HomePage.WhyUs.analytics");
+  const lang = useLocale();
+  const chartData = [
+    { month: `${tAnalytics("jan")}`, desktop: 186, mobile: 80 },
+    { month: `${tAnalytics("feb")}`, desktop: 305, mobile: 200 },
+    { month: `${tAnalytics("mar")}`, desktop: 237, mobile: 120 },
+    { month: `${tAnalytics("apr")}`, desktop: 73, mobile: 190 },
+    { month: `${tAnalytics("may")}`, desktop: 209, mobile: 130 },
+    { month: `${tAnalytics("jun")}`, desktop: 214, mobile: 140 },
+  ];
+
+  const chartConfig = {
+    desktop: {
+      label: `${tAnalytics("desktop")}`,
+      color: "hsl(var(--chart-1))",
+    },
+    mobile: {
+      label: `${tAnalytics("mobile")}`,
+      color: "hsl(var(--chart-2))",
+    },
+  } satisfies ChartConfig;
   return (
-    <Card className="!p-0 w-full  dark rounded-3xl bg-slate-900 border-0 ">
-      <CardContent className="!p-3">
+    <Card className="!p-0 w-full  dark rounded-3xl bg-slate-900 border-0  ">
+      <CardContent className="!p-3 ">
         <ChartContainer config={chartConfig}>
           <AreaChart
             accessibilityLayer
@@ -50,7 +52,11 @@ export function AreaChartAnalytics() {
               tickLine={false}
               axisLine={false}
               tickMargin={8}
-              tickFormatter={(value) => value.slice(0, 3)}
+              tickFormatter={
+                lang === "ar"
+                  ? (value) => value.slice(0, 6)
+                  : (value) => value.slice(0, 3)
+              }
             />
             <ChartTooltip
               cursor={false}
@@ -81,10 +87,11 @@ export function AreaChartAnalytics() {
         <div className="flex w-full items-start gap-2 text-sm">
           <div className="grid gap-2">
             <div className="flex items-center gap-2 font-medium leading-none">
-              Trending up by 5.2% this month <TrendingUp className="h-4 w-4" />
+              {tAnalytics("desc")} <TrendingUp className="h-4 w-4" />
             </div>
             <div className="flex items-center gap-2 leading-none text-muted-foreground">
-              January - June {new Date().getFullYear()}
+              {tAnalytics("jan")} - {tAnalytics("jun")}{" "}
+              {new Date().getFullYear()}
             </div>
           </div>
         </div>

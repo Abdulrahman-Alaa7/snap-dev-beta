@@ -2,39 +2,37 @@ import React from "react";
 import { Card, CardContent } from "./ui/card";
 import { Headset, Timer, ShieldCheck } from "lucide-react";
 import { MdAutoFixHigh } from "react-icons/md";
+import { useTranslations } from "next-intl";
 type Props = {};
 
-export const supportItems = [
-  {
-    icon: <Headset />,
-    title: "Dedicated Support",
-    description:
-      "Benefit from our dedicated support team available to assist you 24/7.",
-  },
-  {
-    icon: <Timer />,
-    title: "Quick Response Times",
-    description:
-      "Experience rapid response times to your inquiries and issues.",
-  },
-  {
-    icon: <ShieldCheck />,
-    title: "Clear Communication",
-    description:
-      "Our team communicates clearly and effectively, ensuring you always understand the status of your project.",
-  },
-  {
-    icon: <MdAutoFixHigh />,
-    title: "Proactive Support",
-    description:
-      "We proactively identify and address potential issues before they impact your business.",
-  },
-];
 const Support = (props: Props) => {
+  const tSupport = useTranslations("HomePage.Support");
+  const supportItems = [
+    {
+      icon: <Headset />,
+      title: `${tSupport("h1")}`,
+      description: `${tSupport("p1")}`,
+    },
+    {
+      icon: <Timer />,
+      title: `${tSupport("h2")}`,
+      description: `${tSupport("p2")}`,
+    },
+    {
+      icon: <ShieldCheck />,
+      title: `${tSupport("h3")}`,
+      description: `${tSupport("p3")}`,
+    },
+    {
+      icon: <MdAutoFixHigh />,
+      title: `${tSupport("h4")}`,
+      description: `${tSupport("p4")}`,
+    },
+  ];
   return (
     <section>
-      <h2 className="gradient-text scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-10">
-        Your vision, our passion.
+      <h2 className="gradient-text scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-6">
+        {tSupport("title")}
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 my-6 transition-all mx-2 md:mx-3">
         {supportItems.map((item, index) => (

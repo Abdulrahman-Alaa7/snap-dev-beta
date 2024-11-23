@@ -14,103 +14,100 @@ import { IoIosCloudOutline } from "react-icons/io";
 import { Card, CardContent, CardHeader } from "./ui/card";
 import { Link } from "../i18n/routing";
 import { AreaChartAnalytics } from "./charts/AreaChart";
+import { useLocale, useTranslations } from "next-intl";
 
 type Props = {};
 
-const features = [
-  {
-    icon: (
-      <IoIosCloudOutline
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white  from-emerald-400 via-green-500 to-lime-500"
-      />
-    ),
-    title: "Domain & Hosting",
-    description: "Reliable hosting, top-tier domains. Your website, protected.",
-  },
-  {
-    icon: (
-      <Sparkles
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-green-400 via-cyan-500 to-blue-700"
-      />
-    ),
-    title: "AI-Powered",
-    description:
-      "AI-powered growth for your business. Future-proof your business with AI.",
-  },
-  {
-    icon: (
-      <Layers3
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-violet-400 via-pink-500 to-pink-400"
-      />
-    ),
-    title: "Modern & Professional Design",
-    description:
-      "Creating stunning, modern websites that leave a lasting impression.",
-  },
-  {
-    icon: (
-      <Lock
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-rose-500 via-amber-600 to-orange-600"
-      />
-    ),
-    title: "Secure Your Business",
-    description: "Your data is safe with our advanced security measures.",
-  },
-  {
-    icon: (
-      <Rocket
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-rose-500 via-red-500 to-pink-700"
-      />
-    ),
-    title: "High-Performance",
-    description:
-      "Experience unparalleled speed and efficiency with our expertly crafted websites.",
-  },
-  {
-    icon: (
-      <CircleCheckBig
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-teal-500 via-teal-700 to-green-800"
-      />
-    ),
-    title: "Built to Perfection",
-    description:
-      "Our websites are meticulously designed and developed following industry best practices.",
-  },
-  {
-    icon: (
-      <Accessibility
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-yellow-500 via-amber-500 to-yellow-800"
-      />
-    ),
-    title: "Accessible to All",
-    description:
-      "Our websites are inclusive and accessible to all, regardless of abilities.",
-  },
-  {
-    icon: (
-      <SearchCheck
-        size={75}
-        className="bg-gradient-to-r rounded-3xl p-3 text-white from-sky-500 via-cyan-500 to-sky-900"
-      />
-    ),
-    title: "SEO Optimized",
-    description:
-      "Our SEO-optimized websites will help you rank higher in search engine results.",
-  },
-];
-
 const WhyUs = (props: Props) => {
+  const lang = useLocale();
+  const tWhyUs = useTranslations("HomePage.WhyUs");
+  const features = [
+    {
+      icon: (
+        <IoIosCloudOutline
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white  from-emerald-400 via-green-500 to-lime-500"
+        />
+      ),
+      title: `${tWhyUs("h1")}`,
+      description: `${tWhyUs("p1")}`,
+    },
+    {
+      icon: (
+        <Sparkles
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-green-400 via-cyan-500 to-blue-700"
+        />
+      ),
+      title: `${tWhyUs("h2")}`,
+      description: `${tWhyUs("p2")}`,
+    },
+    {
+      icon: (
+        <Layers3
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-violet-400 via-pink-500 to-pink-400"
+        />
+      ),
+      title: `${tWhyUs("h3")}`,
+      description: `${tWhyUs("p3")}`,
+    },
+    {
+      icon: (
+        <Lock
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-rose-500 via-amber-600 to-orange-600"
+        />
+      ),
+      title: `${tWhyUs("h4")}`,
+      description: `${tWhyUs("p4")}`,
+    },
+    {
+      icon: (
+        <Rocket
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-rose-500 via-red-500 to-pink-700"
+        />
+      ),
+      title: `${tWhyUs("h5")}`,
+      description: `${tWhyUs("p5")}`,
+    },
+    {
+      icon: (
+        <CircleCheckBig
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-teal-500 via-teal-700 to-green-800"
+        />
+      ),
+      title: `${tWhyUs("h6")}`,
+      description: `${tWhyUs("p6")}`,
+    },
+    {
+      icon: (
+        <Accessibility
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-yellow-500 via-amber-500 to-yellow-800"
+        />
+      ),
+      title: `${tWhyUs("h7")}`,
+      description: `${tWhyUs("p7")}`,
+    },
+    {
+      icon: (
+        <SearchCheck
+          size={75}
+          className="bg-gradient-to-r rounded-3xl p-3 text-white from-sky-500 via-cyan-500 to-sky-900"
+        />
+      ),
+      title: `${tWhyUs("h8")}`,
+      description: `${tWhyUs("p8")}`,
+    },
+  ];
+
   return (
-    <section className="py-12 px-1">
-      <h2 className="gradient-text scroll-m-20 text-xl md:text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-12">
-        Your vision, our technology. Web and app development, tailored to you
+    <section className="py-6 px-1">
+      <h2 className="gradient-text  scroll-m-20 text-xl md:text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-8">
+        {tWhyUs("title")}
       </h2>
       <div className="mx-2 lg:mx-0 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 transition-all my-6 md:mx-3">
         {features.map(({ icon, title, description }, index) => (
@@ -130,7 +127,11 @@ const WhyUs = (props: Props) => {
           </Card>
         ))}
       </div>
-      <Card className="mt-6 flex flex-col md:flex-row justify-center items-center gap-2 hover:border-[#444]  bg-slate-900 transition-all rounded-3xl  md:p-3 p-0">
+      <Card
+        className={`mt-6 flex flex-col ${
+          lang === "ar" ? "md:flex-row-reverse" : "md:flex-row "
+        } justify-center items-center gap-2 hover:border-[#444]  bg-slate-900 transition-all rounded-3xl  md:p-3 p-0`}
+      >
         <div className="w-full md:w-1/2 ">
           <CardHeader>
             <ChartNoAxesCombined
@@ -140,16 +141,13 @@ const WhyUs = (props: Props) => {
           </CardHeader>
           <CardContent>
             <h3 className="text-white/90 scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0 ">
-              In-depth Analytics and Insights
+              {tWhyUs("analytics.title")}
             </h3>
-            <h3 className="text-white/90 scroll-m-20 pb-2 text-xl font-semibold tracking-tight first:mt-0">
-              Uncover valuable data to drive your business forward.
+            <h3 className="text-white/90 scroll-m-20 pb-2 text-xl font-semibold tracking-tight my-3">
+              {tWhyUs("analytics.p1")}
             </h3>
             <p className="w-full leading-7 [&:not(:first-child)]:mt-2 text-[#939db6]">
-              Our comprehensive analytics suite provides you with deep insights
-              into the performance of your applications. Gain a clear
-              understanding of your users&#39;behavior, track key metrics, and
-              make data-driven decisions to optimize your products.{" "}
+              {tWhyUs("analytics.p2")}
             </p>
             <Link
               href={`/analytics`}
@@ -161,7 +159,7 @@ const WhyUs = (props: Props) => {
                 className={`inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full
              text-slate-950 px-7 text-sm font-medium  backdrop-blur-3xl gap-2 bg-[#fff]`}
               >
-                More details
+                {tWhyUs("analytics.linkAnalytics")}
                 <MousePointer2 size={18} className=" rotate-90" />
               </span>
             </Link>
