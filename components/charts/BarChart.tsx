@@ -1,11 +1,9 @@
 "use client";
-import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "../ui/card";
@@ -15,34 +13,39 @@ import {
   ChartTooltip,
   ChartTooltipContent,
 } from "../ui/chart";
-
-const chartData = [
-  { month: "January", desktop: 186, mobile: 80 },
-  { month: "February", desktop: 305, mobile: 200 },
-  { month: "March", desktop: 237, mobile: 120 },
-  { month: "April", desktop: 73, mobile: 190 },
-  { month: "May", desktop: 209, mobile: 130 },
-  { month: "June", desktop: 214, mobile: 140 },
-];
-
-const chartConfig = {
-  desktop: {
-    label: "Desktop",
-    color: "hsl(var(--chart-1))",
-  },
-  mobile: {
-    label: "Mobile",
-    color: "hsl(var(--chart-2))",
-  },
-} satisfies ChartConfig;
+import { useLocale, useTranslations } from "next-intl";
 
 export function BarChartAnalytics() {
+  const lang = useLocale();
+  const tAnalytics = useTranslations("AnalyticsPage");
+  const t = useTranslations("HomePage.WhyUs.analytics");
+
+  const chartData = [
+    { month: `${t("jan")}`, desktop: 186, mobile: 80 },
+    { month: `${t("feb")}`, desktop: 305, mobile: 200 },
+    { month: `${t("mar")}`, desktop: 237, mobile: 120 },
+    { month: `${t("apr")}`, desktop: 73, mobile: 190 },
+    { month: `${t("may")}`, desktop: 209, mobile: 130 },
+    { month: `${t("jun")}`, desktop: 214, mobile: 140 },
+  ];
+
+  const chartConfig = {
+    desktop: {
+      label: `${t("desktop")}`,
+      color: "hsl(var(--chart-1))",
+    },
+    mobile: {
+      label: `${t("mobile")}`,
+      color: "hsl(var(--chart-2))",
+    },
+  } satisfies ChartConfig;
+
   return (
     <Card className="!p-0">
       <CardHeader>
-        <CardTitle>Analytics</CardTitle>
+        <CardTitle>{tAnalytics("analytics")}</CardTitle>
         <CardDescription>
-          January - June {new Date().getFullYear()}
+          {t("jan")} - {t("jun")} {new Date().getFullYear()}
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -54,7 +57,11 @@ export function BarChartAnalytics() {
               tickLine={false}
               tickMargin={10}
               axisLine={false}
-              tickFormatter={(value) => value.slice(0, 3)}
+              tickFormatter={
+                lang === "ar"
+                  ? (value) => value.slice(0, 6)
+                  : (value) => value.slice(0, 3)
+              }
             />
             <ChartTooltip
               cursor={false}

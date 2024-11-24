@@ -22,13 +22,27 @@ import {
   SelectTrigger,
   SelectValue,
 } from "./ui/select";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import countriesData from "../database/countries.json";
 
 type Props = {};
 
 const ContactForm = (props: Props) => {
+  const helpTopicData = [
+    { topic_en: "Website", topic_ar: "موقع ويب" },
+    { topic_en: "Mobile Application", topic_ar: "تطبيق" },
+    { topic_en: "Marketing", topic_ar: "تسويق" },
+    { topic_en: "Social Media", topic_ar: "حسابات تواصل اجتماعي" },
+    { topic_en: "Technical Support", topic_ar: " دعم فني" },
+    { topic_en: "Custom Template", topic_ar: "قوالب مخصصه" },
+    { topic_en: "Hosting & Domain", topic_ar: " استضافة و دومين" },
+    { topic_en: "Shopify", topic_ar: "شوبيفاي" },
+    { topic_en: "Wordpress", topic_ar: " ورد بريس" },
+    { topic_en: "Other", topic_ar: " اخرى" },
+  ];
+
   const lang = useLocale();
+  const t = useTranslations("ContactUsPage.ContactForm");
 
   const sortDataByLocale = (data: any, arKey: any, enKey: any, lang: any) => {
     return [...data].sort((a, b) =>
@@ -51,42 +65,51 @@ const ContactForm = (props: Props) => {
   };
 
   const checkOutSchema = z.object({
-    fullName: z.string().min(3, { message: `Name is required` }).max(50, {
-      message: `Over 50`,
-    }),
+    fullName: z
+      .string()
+      .min(3, { message: `${t("nameMinValid")}` })
+      .max(50, {
+        message: `${t("nameMaxValid")}`,
+      }),
     email: z
       .string()
       .min(1, {
-        message: `Email is required`,
+        message: `${t("emailMinValid")}`,
       })
       .email({
-        message: `Not valid`,
+        message: `${t("emailMaxValid")}`,
       }),
     phone_number: z
       .string()
       .min(6, {
-        message: `Phone Number is required`,
+        message: `${t("phoneNumberMinValid")}`,
       })
-      .max(45, { message: `Over 45` }),
-    country: z.string().min(3, { message: `Country is required` }).max(100, {
-      message: `Over 100`,
-    }),
+      .max(16, { message: `${t("phoneNumberMaxValid")}` }),
+    country: z
+      .string()
+      .min(3, { message: `${t("countryMinValid")}` })
+      .max(50, {
+        message: `${t("countryMaxValid")}`,
+      }),
     company: z
       .string()
       .max(150, {
-        message: `Over 150`,
+        message: `${t("ccompanyMaxValid")}`,
       })
       .optional(),
-    helpTobic: z.string().min(3, { message: `Topic is required` }).max(150, {
-      message: `Over 150`,
-    }),
+    helpTobic: z
+      .string()
+      .min(3, { message: `${t("topicMinValid")}` })
+      .max(150, {
+        message: `${t("topicMaxValid")}`,
+      }),
     message: z
       .string()
       .min(5, {
-        message: `Message is required`,
+        message: `${t("messageMinValid")}`,
       })
       .max(250, {
-        message: `Over 250`,
+        message: `${t("messageMaxValid")}`,
       }),
   });
 
@@ -110,24 +133,11 @@ const ContactForm = (props: Props) => {
       };
       console.log(NewData);
       form.reset();
-      toast.success(`Send SuccessFuly`);
+      toast.success(`${t("successMsg")}`);
     } catch (error: any) {
-      toast.error(`Error`);
+      toast.error(`${t("errorMsg")}`);
     }
   };
-
-  const helpTopicData = [
-    { topic_en: "Website", topic_ar: "موقع الكتروني" },
-    { topic_en: "Mobile Application", topic_ar: "تطبيق" },
-    { topic_en: "Marketing", topic_ar: "تسويق" },
-    { topic_en: "Social Media", topic_ar: "حسابات تواصل اجتماعي" },
-    { topic_en: "Technical Support", topic_ar: " دعم فني" },
-    { topic_en: "Custom Template", topic_ar: "قوالب مخصصه" },
-    { topic_en: "Hosting & Domain", topic_ar: " استضافة و دومين" },
-    { topic_en: "Shopify", topic_ar: "شوبيفاي" },
-    { topic_en: "Wordpress", topic_ar: " ورد بريس" },
-    { topic_en: "Other", topic_ar: " اخرى" },
-  ];
 
   return (
     <>
@@ -139,9 +149,13 @@ const ContactForm = (props: Props) => {
               name="fullName"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Name</FormLabel>
+                  <FormLabel>{t("name")}</FormLabel>
                   <FormControl>
-                    <Input placeholder={`Name`} {...field} className="py-6" />
+                    <Input
+                      placeholder={`${t("name")}`}
+                      {...field}
+                      className="py-6"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -152,9 +166,13 @@ const ContactForm = (props: Props) => {
               name="email"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Email</FormLabel>
+                  <FormLabel>{t("email")}</FormLabel>
                   <FormControl>
-                    <Input placeholder={`Email`} {...field} className="py-6" />
+                    <Input
+                      placeholder={`${t("email")}`}
+                      {...field}
+                      className="py-6"
+                    />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -165,11 +183,11 @@ const ContactForm = (props: Props) => {
               name="phone_number"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Phone Number</FormLabel>
+                  <FormLabel>{t("phoneNumber")}</FormLabel>
                   <FormControl>
                     <Input
                       type="number"
-                      placeholder="Phone Number"
+                      placeholder={`${t("phoneNumber")}`}
                       {...field}
                       className="py-6"
                     />
@@ -182,16 +200,19 @@ const ContactForm = (props: Props) => {
               control={form.control}
               name="country"
               render={({ field }) => (
-                <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Country / Region</FormLabel>
+                <FormItem className="w-full lg:w-[80%] ">
+                  <FormLabel>{t("country")}</FormLabel>
                   <Select
                     onValueChange={(value) => {
                       field.onChange(value);
                     }}
                   >
                     <FormControl className="py-6">
-                      <SelectTrigger aria-label="Select a country">
-                        <SelectValue placeholder={`Select a country`} />
+                      <SelectTrigger
+                        aria-label="Select a country"
+                        className={`${lang === "ar" && "flex-row-reverse"}`}
+                      >
+                        <SelectValue placeholder={`${t("selectCountry")}`} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -219,10 +240,10 @@ const ContactForm = (props: Props) => {
               name="company"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Company (optional)</FormLabel>
+                  <FormLabel>{t("company")}</FormLabel>
                   <FormControl>
                     <Input
-                      placeholder={`Company`}
+                      placeholder={`${t("companyInput")}`}
                       {...field}
                       className="py-6"
                     />
@@ -236,15 +257,18 @@ const ContactForm = (props: Props) => {
               name="helpTobic"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>What can we help you with?</FormLabel>
+                  <FormLabel>{t("topic")}</FormLabel>
                   <Select
                     onValueChange={(value) => {
                       field.onChange(value);
                     }}
                   >
                     <FormControl className="py-6">
-                      <SelectTrigger aria-label="Select a topic">
-                        <SelectValue placeholder={`Select a topic`} />
+                      <SelectTrigger
+                        aria-label="Select a topic"
+                        className={`${lang === "ar" && "flex-row-reverse"}`}
+                      >
+                        <SelectValue placeholder={`${t("selectTopic")}`} />
                       </SelectTrigger>
                     </FormControl>
                     <SelectContent>
@@ -272,10 +296,10 @@ const ContactForm = (props: Props) => {
               name="message"
               render={({ field }) => (
                 <FormItem className="w-full lg:w-[80%]">
-                  <FormLabel>Message</FormLabel>
+                  <FormLabel>{t("message")}</FormLabel>
                   <FormControl>
                     <Textarea
-                      placeholder={`Messgae`}
+                      placeholder={`${t("message")}`}
                       className="resize-none w-full min-h-[100px] max-h-[150px] overflow-auto"
                       {...field}
                     />
@@ -291,7 +315,7 @@ const ContactForm = (props: Props) => {
             type="submit"
             className="w-full lg:w-[80%] h-11 rounded-full mx-auto flex justify-center items-center"
           >
-            Send message
+            {t("submit")}
           </Button>
         </form>
       </Form>

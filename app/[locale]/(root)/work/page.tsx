@@ -13,9 +13,6 @@ const Page = (props: Props) => {
         keywords="websites, web, mobile appllication, apps, tech"
       />
       <div>
-        <h2 className="gradient-text scroll-m-20 text-2xl font-extrabold tracking-tight lg:text-4xl text-center mb-6 mt-12">
-          A small selection of recent projects
-        </h2>
         <OurWork />
       </div>
     </div>

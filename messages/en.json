@@ -95,5 +95,275 @@
       "desc": "Reach out to us today and let's discuss how we can help you achieve your goals.",
       "linkContact": "Let's get in touch"
     }
+  },
+  "AnalyticsPage": {
+    "analytics": "Analytics",
+    "MainTitle": "In-depth Analytics and Insights",
+    "SecTitle": "Uncover valuable data to drive your business forward.",
+    "desc1": "Our comprehensive analytics suite provides you with deep insights into the performance of your applications. Gain a clear understanding of your users' behavior, track key metrics, and make data-driven decisions to optimize your products.",
+    "KeyFeaturesTitle": "Key Features:",
+    "KeyFeatures": [
+      {
+        "title": "Comprehensive Performance Tracking:",
+        "detail": "Monitor vital metrics such as user engagement, retention rates, and conversion rates."
+      },
+      {
+        "title": "Integrations with Leading Analytics Tools:",
+        "detail": "We connect our applications with industry-leading analytics platforms like Google Analytics, TikTok Analytics Pixel, and Meta Pixel for a holistic view of your user journey."
+      },
+      {
+        "title": "Revenue Analysis:",
+        "detail": "Gain insights into your revenue streams and identify opportunities for growth."
+      },
+      {
+        "title": "User Behavior Analysis:",
+        "detail": "Understand how users interact with your applications and identify areas for improvement."
+      },
+      {
+        "title": "Funnel Analysis:",
+        "detail": "Visualize the user journey and identify drop-off points."
+      },
+      {
+        "title": "Custom Event Tracking:",
+        "detail": "Track specific actions and behaviors to gain deeper insights into your users."
+      }
+    ],
+    "BenefitsTitle": "Benefits:",
+    "Benefits": [
+      {
+        "title": "Data-Driven Decision Making:",
+        "detail": "Make informed decisions based on real-time data."
+      },
+      {
+        "title": "Improved User Experience:",
+        "detail": "Optimize your applications to meet the needs of your users."
+      },
+      {
+        "title": "Increased Revenue:",
+        "detail": "Identify new revenue opportunities and maximize your return on investment."
+      },
+      {
+        "title": "Competitive Advantage:",
+        "detail": "Gain a deeper understanding of your market and stay ahead of the competition."
+      }
+    ],
+    "CapabilitiesTitle": "With our advanced analytics capabilities, you can:",
+    "Capabilities": [
+      "Measure the success of your marketing campaigns.",
+      "Identify trends and patterns in user behavior.",
+      "Optimize your app store listings.",
+      "Improve your app's overall performance."
+    ],
+    "Conclusion": "Take control of your data and unlock the full potential of your applications."
+  },
+  "OurWork": {
+    "title": "A small selection of recent projects",
+    "projects": [
+      {
+        "id": 0,
+        "title": "OGs Games Web App",
+        "des": "Discover the ultimate platform for card games in Egypt, offering a seamless online shopping experience.",
+        "img": "/assets/ogs-games-user.webp",
+        "link": "https://ogsgames.com"
+      },
+      {
+        "id": 1,
+        "title": "OGs Games Dashboard",
+        "des": "Efficient and user-friendly dashboard designed for OGs Games administration and management.",
+        "img": "/assets/ogs-dashboard.webp",
+        "link": "https://ogs-dashboard.vercel.app/"
+      },
+      {
+        "id": 2,
+        "title": "Portfolio App",
+        "des": "A sleek and professional portfolio showcasing personal projects and skills.",
+        "img": "/assets/portfolio-app.webp",
+        "link": "https://abdulrahman-portfolio7.vercel.app/"
+      },
+      {
+        "id": 3,
+        "title": "Rockies Food Truck Web App",
+        "des": "Interactive electronic menu for Rockies Food Truck, enhancing the customer experience.",
+        "img": "/assets/rockies-client.webp",
+        "link": "https://rockies-client-betav0-1.vercel.app/"
+      },
+      {
+        "id": 4,
+        "title": "Rockies Admin Dashboard",
+        "des": "Comprehensive dashboard for managing Rockies Food Truck's electronic menu system.",
+        "img": "/assets/rockies-dashboard.webp",
+        "link": "https://rockies-dashboard.vercel.app/"
+      },
+      {
+        "id": 5,
+        "title": "College Web App",
+        "des": "A responsive educational platform that simplifies the study process for users.",
+        "img": "/assets/college-project.webp",
+        "link": "https://fr-fac-arts.vercel.app/"
+      },
+      {
+        "id": 6,
+        "title": "Bank Web App ReactJs",
+        "des": "Modern banking web app built with ReactJs, Vite, and TailwindCSS, offering full responsiveness.",
+        "img": "/assets/bank-app.webp",
+        "link": "https://bank-web-silk.vercel.app/"
+      },
+      {
+        "id": 7,
+        "title": "Events App NextJs",
+        "des": "A full-stack web app for managing and exploring events, with responsive design.",
+        "img": "/assets/events-app.webp",
+        "link": "https://events-app-next.vercel.app/"
+      },
+      {
+        "id": 8,
+        "title": "Dashboard Profile Web",
+        "des": "Elegant dashboard built using HTML5, CSS3, and custom JS framework, fully responsive.",
+        "img": "/assets/admin-dashboard-era.webp",
+        "link": "https://dashboard-profle-web.vercel.app/"
+      },
+      {
+        "id": 9,
+        "title": "Personal Blog App",
+        "des": "Minimalist and responsive personal blog crafted with JavaScript, HTML5, and CSS3.",
+        "img": "/assets/era-web.webp",
+        "link": "https://era-web-ten.vercel.app/"
+      },
+      {
+        "id": 10,
+        "title": "Bondi Theme Bootstrap 5",
+        "des": "A responsive Bootstrap 5 theme designed with clean HTML5 and CSS3.",
+        "img": "/assets/bondi-tem.webp",
+        "link": "https://bondi-theme.vercel.app/"
+      },
+      {
+        "id": 11,
+        "title": "Modern E-Commerce ReactJs",
+        "des": "An advanced e-commerce platform powered by ReactJs with Redux Toolkit (not responsive).",
+        "img": "/assets/e-commerce.webp",
+        "link": "https://modern-e-commerce-react.vercel.app/"
+      },
+      {
+        "id": 12,
+        "title": "Kasper Web App",
+        "des": "Stylish and fully responsive web app developed with HTML5 and CSS.",
+        "img": "/assets/kasper-web.webp",
+        "link": "https://kasper-web.vercel.app/"
+      }
+    ],
+    "by": "by",
+    "liveSite": "Live Site"
+  },
+  "AboutPage": {
+    "aboutImageAlt": "About Snap Dev",
+    "whoWeAre": "Who We Are",
+    "headline": "Behind the Code: Snap Dev",
+    "description": "At Snap Dev, we specialize in crafting digital solutions tailored to meet the unique needs of businesses. From stunning websites and intuitive mobile apps to strategic marketing plans and customizable templates, we provide everything you need to build a strong digital presence. Our team is dedicated to delivering innovative Shopify and WordPress solutions, along with reliable tech support to keep your business running smoothly.",
+    "missionTitle": "Our Mission",
+    "missionDescription": "To deliver user-focused, creative, and reliable solutions that help businesses thrive in a competitive digital world.",
+    "visionTitle": "Our Vision",
+    "visionDescription": "To empower businesses with innovative digital solutions that drive growth and success."
+  },
+  "TechPage": {
+    "header": "Empowering Innovation with Cutting-Edge Technology at Snap Dev",
+    "intro": "At Snap Dev, innovation lies at the heart of everything we do. As a full-service digital agency, we are committed to delivering exceptional web and mobile solutions that not only meet but exceed the evolving demands of today's digital landscape. Our expertise spans across a wide range of services, including website development, custom applications, social media growth strategies, advertising campaigns, and technical support.",
+    "modernTechnologiesTitle": "Leveraging the Power of Modern Technologies",
+    "modernTechnologiesContent": "In our journey to build impactful digital solutions, we embrace the latest and most advanced technologies. Our development stack includes industry-leading tools and frameworks that are designed to provide seamless user experiences, exceptional performance, and unmatched scalability.",
+    "frontendExcellenceTitle": "Frontend Excellence: React.js & Next.js",
+    "frontendExcellenceContent": "We harness the power of React.js, one of the most popular and robust JavaScript libraries, to create dynamic and interactive user interfaces. Coupled with Next.js, a cutting-edge framework for server-rendered applications, we ensure our projects are fast, SEO-friendly, and built for modern web standards.",
+    "backendStrengthTitle": "Backend Strength: Node.js & MongoDB & Graphql",
+    "backendStrengthContent": "For backend development, we utilize Node.js, which allows us to deliver scalable and high-performance applications. By integrating MongoDB for efficient and flexible database management, we ensure that your project is backed by a reliable infrastructure.",
+    "integrationsTitle": "Seamless Integrations: Shopify, WordPress & Custom APIs",
+    "integrationsContent": "Whether you're an eCommerce business seeking tailored solutions through Shopify or a content-driven website relying on WordPress, our team is adept at optimizing and extending these platforms.We also specialize in creating custom APIs, ensuring seamless integration between your systems.",
+    "aiCloudTitle": "Staying Ahead with AI and Cloud Solutions",
+    "aiCloudContent": "In addition to web and app development, Snap Dev is always exploring advanced technologies like Artificial Intelligence (AI) and cloud-based solutions to drive innovation. From implementing AI-driven features to ensuring robust cloud hosting environments, we are equipped to bring your vision to life.",
+    "whyChooseUsTitle": "Why Choose Snap Dev?",
+    "whyChooseUsList": [
+      {
+        "title": "Future-Proof Solutions",
+        "detail": " By adopting modern frameworks and tools, we ensure your website or application remains relevant and efficient for years to come."
+      },
+      {
+        "title": "Customization at Scale:",
+        "detail": " Every project we undertake is tailor-made to align perfectly with your unique business goals."
+      },
+      {
+        "title": "Seamless Collaboration:",
+        "detail": "Our process involves close collaboration with clients, ensuring transparency, timely delivery, and exceptional results."
+      }
+    ],
+    "joinUsTitle": "Join Us on the Path to Digital Excellence",
+    "joinUsContent": "At Snap Dev, we don't just build websites or applications—we create experiences. With our focus on leveraging the latest technologies and maintaining a client-first approach, we empower businesses to succeed in an increasingly competitive digital world.",
+    "letsShape": "Let's shape the future together. ",
+    "contactUs": "Contact Snap Dev",
+    "lastP": "today and discover how our technological expertise can elevate your business."
+  },
+  "ServicesPage": {
+    "bannerAlt": "Snap Dev Services Banner",
+    "title": "Building the Future, One Service at a Time",
+    "intro": "At Snap Dev, we specialize in delivering cutting-edge solutions designed to help your business thrive in the digital age. From stunning websites to seamless mobile apps, optimized Shopify stores, and strategic marketing plans, our services are tailored to meet your unique needs and goals. Discover how we can transform your ideas into impactful digital experiences.",
+    "webApps": {
+      "title": "Web Apps",
+      "description": "At Snap Dev, we specialize in crafting custom websites tailored to your business needs. From responsive designs to advanced functionality, our web development team is experienced in creating engaging user experiences. We use modern technologies like React, Next.js, and Tailwind CSS to ensure your website is fast, scalable, and optimized for all devices."
+    },
+    "mobileApps": {
+      "title": "Mobile Apps",
+      "description": "Our mobile app development services bring your ideas to life on both Android and iOS platforms. Whether you need a simple app or a complex, feature-rich mobile solution, Snap Dev provides end-to-end services—from design to deployment. We prioritize intuitive user interfaces, performance, and cross-platform compatibility to ensure your app stands out."
+    },
+    "marketingPlans": {
+      "title": "Marketing Plans",
+      "description": "Snap Dev offers customized marketing plans designed to grow your brand and engage your audience. Whether you're just starting out or looking to refine your strategy, we provide a range of services, including SEO optimization, social media campaigns, and content marketing. Our goal is to ensure your business attracts the right attention and converts visitors into loyal customers."
+    },
+    "templates": {
+      "title": "Templates",
+      "description": "We offer an extensive selection of pre-designed templates to help speed up the development of your digital project. These templates are fully customizable, giving you the flexibility to create a website or app that reflects your unique brand while saving time and resources. Whether for e-commerce, portfolios, or blogs, our templates are designed to be user-friendly and fully responsive."
+    },
+    "techSupport": {
+      "title": "Technical Support",
+      "description": "Our tech support services are there for you whenever you need assistance. From troubleshooting issues to providing guidance on best practices, Snap Dev's team is ready to support you. We offer personalized solutions to ensure that your website, app, or system is always running smoothly, helping you maintain seamless operations without the technical headaches"
+    },
+    "shopify": {
+      "title": "Shopify",
+      "description": "Snap Dev excels in Shopify development, offering tailored e-commerce solutions that make it easier for you to manage your online store. We help with everything from theme customization to setting up payment gateways, ensuring a streamlined and efficient shopping experience. Whether you're starting a new store or enhancing an existing one, we create solutions that drive sales and boost customer satisfaction"
+    },
+    "wordpress": {
+      "title": "WordPress",
+      "description": "Our WordPress development services are perfect for businesses looking for an easy-to-manage yet powerful website. We specialize in building custom WordPress themes, plugin integration, and site optimization. With our expertise, you can create a site that's visually stunning, easy to update, and fully functional, whether it's a blog, portfolio, or business website."
+    }
+  },
+  "ContactUsPage": {
+    "title": "Get In Touch",
+    "desc": "Feel free to contact us? Submit your queries here and we will listen.",
+    "callUs": "Call Us Directly At",
+    "chat": "Chat With Our Team",
+    "contactUs": "Contact Us",
+    "ContactForm": {
+      "name": "Name",
+      "nameMinValid": "Name is required",
+      "nameMaxValid": "Name must be 50 characters or less",
+      "email": "Email",
+      "emailMinValid": "Email is required",
+      "emailMaxValid": "Not valid email",
+      "phoneNumber": "Phone number",
+      "phoneNumberMinValid": "Phone number is required",
+      "phoneNumberMaxValid": "Phone number must be 16 digits or less",
+      "country": "Country / Region",
+      "selectCountry": "Select a country",
+      "countryMinValid": "Country is required",
+      "countryMaxValid": "Country must be 50 characters or less",
+      "company": "Company (optional)",
+      "companyInput": "Company",
+      "ccompanyMaxValid": "Company must be 150 characters or less",
+      "topic": "What can we help you with?",
+      "selectTopic": "Select a topic",
+      "topicMinValid": "Topic is required",
+      "topicMaxValid": "Topic must be 150 characters or less",
+      "message": "Message",
+      "messageMinValid": "Message is required",
+      "messageMaxValid": "Message must be 250 characters or less",
+      "submit": "Send message",
+      "successMsg": "The message has been sent successfully",
+      "errorMsg": "Somethin went wrong. Try again later"
+    }
   }
 }
