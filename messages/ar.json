@@ -161,90 +161,118 @@
     "projects": [
       {
         "id": 0,
-        "title": "تطبيق ويب OGs Games",
-        "des": "اكتشف أفضل منصة لألعاب الورق في مصر مع تجربة تسوق إلكتروني سهلة وممتعة.",
-        "img": "/assets/ogs-games-user.webp",
-        "link": "https://ogsgames.com"
+        "title": "متجر Calesee الإلكتروني",
+        "des": "اكتشف أحدث الأحذية النسائية العصرية مع تجربة تسوق إلكتروني سهلة وسريعة وجودة عالية.",
+        "img": "/assets/calesee-project.png",
+        "link": "https://calesee.com"
       },
       {
         "id": 1,
+        "title": "لوحة تحكم Calesee",
+        "des": "لوحة تحكم متكاملة لإدارة متجر الأحذية النسائية Calesee والطلبات والمنتجات بسهولة.",
+        "img": "/assets/calesee-dashboard.png",
+        "link": "https://drive.google.com/file/d/1c5AEXpI_UUx0QAQczCuYxp5JMm7PDcTg/view?usp=sharing"
+      },
+      {
+        "id": 2,
+        "title": "متجر Kids Planet",
+        "des": "متجر إلكتروني لملابس الأطفال يقدم أحدث الموديلات بجودة عالية وتجربة تسوق ممتعة.",
+        "img": "/assets/kids-planet.png",
+        "link": "https://kids-planet-client.vercel.app/en"
+      },
+      {
+        "id": 3,
+        "title": "لوحة تحكم Kids Planet",
+        "des": "لوحة تحكم لإدارة متجر ملابس الأطفال Kids Planet وتنظيم المنتجات والطلبات بسهولة.",
+        "img": "/assets/kids-planet-dashboard.png",
+        "link": "https://kids-planet-dashboard.vercel.app/"
+      },
+      {
+        "id": 4,
+        "title": "تطبيق ويب OGs Games",
+        "des": "اكتشف أفضل منصة لألعاب الورق في مصر مع تجربة تسوق إلكتروني سهلة وممتعة.",
+        "img": "/assets/ogs-games-user.webp",
+        "link": "https://ogs-games-beta-v1.vercel.app/en"
+      },
+      {
+        "id": 5,
         "title": "لوحة تحكم OGs Games",
         "des": "لوحة تحكم فعالة وسهلة الاستخدام لإدارة تطبيق OGs Games.",
         "img": "/assets/ogs-dashboard.webp",
         "link": "https://ogs-dashboard.vercel.app/"
       },
       {
-        "id": 2,
+        "id": 6,
         "title": "تطبيق Portfolio",
         "des": "  Portfolio أنيق لعرض المشاريع والمهارات الشخصية.",
         "img": "/assets/portfolio-app.webp",
         "link": "https://abdulrahman-portfolio7.vercel.app/"
       },
       {
-        "id": 3,
+        "id": 7,
         "title": "تطبيق ويب Rockies Food Truck",
         "des": "قائمة طعام إلكترونية تفاعلية تعزز تجربة العملاء لشاحنة Rockies.",
         "img": "/assets/rockies-client.webp",
         "link": "https://rockies-client-betav0-1.vercel.app/"
       },
       {
-        "id": 4,
+        "id": 8,
         "title": "لوحة تحكم Rockies",
         "des": "لوحة تحكم شاملة لإدارة نظام قائمة الطعام الإلكترونية لشاحنة Rockies.",
         "img": "/assets/rockies-dashboard.webp",
         "link": "https://rockies-dashboard.vercel.app/"
       },
       {
-        "id": 5,
+        "id": 9,
         "title": "تطبيق ويب الكلية",
         "des": "منصة تعليمية متجاوبة تسهل عملية الدراسة للمستخدمين.",
         "img": "/assets/college-project.webp",
         "link": "https://fr-fac-arts.vercel.app/"
       },
       {
-        "id": 6,
+        "id": 10,
         "title": "تطبيق بنك ReactJs",
         "des": "تطبيق مصرفي حديث ومبسط بُني باستخدام ReactJs وTailwindCSS.",
         "img": "/assets/bank-app.webp",
         "link": "https://bank-web-silk.vercel.app/"
       },
       {
-        "id": 7,
+        "id": 11,
         "title": " تطبيق الأحداث و الفاعاليات ",
         "des": "تطبيق ويب كامل لإدارة واستكشاف الأحداث، بتصميم متجاوب.",
         "img": "/assets/events-app.webp",
         "link": "https://events-app-next.vercel.app/"
       },
       {
-        "id": 8,
+        "id": 12,
         "title": "لوحة تحكم شخصية",
         "des": "لوحة تحكم أنيقة صُممت باستخدام HTML5 وCSS3 وإطار عمل شخصي.",
         "img": "/assets/admin-dashboard-era.webp",
         "link": "https://dashboard-profle-web.vercel.app/"
       },
       {
-        "id": 9,
+        "id": 13,
         "title": "تطبيق المدونة الشخصية",
         "des": "مدونة شخصية بسيطة ومتجاوبة صُممت باستخدام JavaScript وHTML5 وCSS3.",
         "img": "/assets/era-web.webp",
         "link": "https://era-web-ten.vercel.app/"
       },
       {
-        "id": 10,
+        "id": 14,
         "title": "قالب Bondi Bootstrap 5",
         "des": "تصميم أنيق ومتجاوب باستخدام Bootstrap 5.",
         "img": "/assets/bondi-tem.webp",
         "link": "https://bondi-theme.vercel.app/"
       },
       {
-        "id": 11,
+        "id": 15,
         "title": "متجر إلكتروني ReactJs",
         "des": "منصة تجارة إلكترونية مدعومة بـ ReactJs وRedux Toolkit. (متجاوب مع الشاشات الكبيره فقط)",
         "img": "/assets/e-commerce.webp",
         "link": "https://modern-e-commerce-react.vercel.app/"
       },
       {
-        "id": 12,
+        "id": 16,
         "title": "تطبيق Kasper ويب",
         "des": "تطبيق ويب أنيق ومتجاوب كليًا، مطور باستخدام HTML5 وCSS.",
         "img": "/assets/kasper-web.webp",

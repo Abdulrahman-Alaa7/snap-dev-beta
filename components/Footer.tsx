@@ -138,11 +138,11 @@ const Footer = () => {
 
             <Link
               dir="ltr"
-              href={`mailto:support@snapdev.com`}
+              href={`mailto:itssnapdev@gmail.com`}
               className="text-left  md:mx-0 mb-4 flex items-center justify-center md:justify-start gap-2 text-[#666] leading-loose text-[14px] dark:text-[#939db6] hover:!text-primary dark:hover:text-primary !transition-all !duration-300"
             >
               <Mail />
-              support@snapdev.com{" "}
+              itssnapdev@gmail.com{" "}
             </Link>
             <Link
               dir="ltr"

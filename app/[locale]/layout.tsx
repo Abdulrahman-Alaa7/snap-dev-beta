@@ -52,8 +52,14 @@ export default async function RootLayout({
             locale === "ar" ? `!font-cairo` : `!font-sans`
           } min-h-screen dark:bg-background  antialiased`,
           fontSans.variable,
-          cairo.variable
+          cairo.variable,
         )}
+        style={
+          {
+            "--gradient-background-start": "rgb(108, 0, 162)",
+            "--gradient-background-end": "rgb(0, 17, 82)",
+          } as React.CSSProperties
+        }
       >
         <Provider>
           <NextIntlClientProvider messages={messages}>

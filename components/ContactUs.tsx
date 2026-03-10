@@ -79,12 +79,12 @@ const ContactUs = (props: Props) => {
                 dir="ltr"
               >
                 {" "}
-                support@snapdev.com
+                itssnapdev@gmail.com
               </p>
             </CardContent>
             <CardFooter>
               <Link
-                href={`mailto:support@snapdev.com`}
+                href={`mailto:itssnapdev@gmail.com`}
                 className="flex justify-center items-center mx-auto bg-[#ccc] text-gray-800  dark:text-white rounded-full w-full h-11 hover:bg-muted-foreground/80 dark:bg-[#ffffff09] dark:hover:bg-[#ffffff06]"
               >
                 {t("contactUs")}

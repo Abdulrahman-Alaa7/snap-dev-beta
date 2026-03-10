@@ -161,90 +161,118 @@
     "projects": [
       {
         "id": 0,
-        "title": "OGs Games Web App",
-        "des": "Discover the ultimate platform for card games in Egypt, offering a seamless online shopping experience.",
-        "img": "/assets/ogs-games-user.webp",
-        "link": "https://ogsgames.com"
+        "title": "Calesee E-commerce Store",
+        "des": "Explore trendy women’s shoes with a modern online shopping experience, fast browsing, and secure checkout.",
+        "img": "/assets/calesee-project.png",
+        "link": "https://calesee.com"
       },
       {
         "id": 1,
+        "title": "Calesee Admin Dashboard",
+        "des": "Powerful dashboard for managing the Calesee women’s shoes store, products, orders, and customers easily.",
+        "img": "/assets/calesee-dashboard.png",
+        "link": "https://drive.google.com/file/d/1c5AEXpI_UUx0QAQczCuYxp5JMm7PDcTg/view?usp=sharing"
+      },
+      {
+        "id": 2,
+        "title": "Kids Planet Online Store",
+        "des": "A modern e-commerce store for stylish kids clothing with smooth shopping and a user-friendly experience.",
+        "img": "/assets/kids-planet.png",
+        "link": "https://kids-planet-client.vercel.app/en"
+      },
+      {
+        "id": 3,
+        "title": "Kids Planet Dashboard",
+        "des": "Admin dashboard for managing kids clothing products, orders, and store operations efficiently.",
+        "img": "/assets/kids-planet-dashboard.png",
+        "link": "https://kids-planet-dashboard.vercel.app/"
+      },
+      {
+        "id": 4,
+        "title": "OGs Games Web App",
+        "des": "Discover the ultimate platform for card games in Egypt, offering a seamless online shopping experience.",
+        "img": "/assets/ogs-games-user.webp",
+        "link": "https://ogs-games-beta-v1.vercel.app/en"
+      },
+      {
+        "id": 5,
         "title": "OGs Games Dashboard",
         "des": "Efficient and user-friendly dashboard designed for OGs Games administration and management.",
         "img": "/assets/ogs-dashboard.webp",
         "link": "https://ogs-dashboard.vercel.app/"
       },
       {
-        "id": 2,
+        "id": 6,
         "title": "Portfolio App",
         "des": "A sleek and professional portfolio showcasing personal projects and skills.",
         "img": "/assets/portfolio-app.webp",
         "link": "https://abdulrahman-portfolio7.vercel.app/"
       },
       {
-        "id": 3,
+        "id": 7,
         "title": "Rockies Food Truck Web App",
         "des": "Interactive electronic menu for Rockies Food Truck, enhancing the customer experience.",
         "img": "/assets/rockies-client.webp",
         "link": "https://rockies-client-betav0-1.vercel.app/"
       },
       {
-        "id": 4,
+        "id": 8,
         "title": "Rockies Admin Dashboard",
         "des": "Comprehensive dashboard for managing Rockies Food Truck's electronic menu system.",
         "img": "/assets/rockies-dashboard.webp",
         "link": "https://rockies-dashboard.vercel.app/"
       },
       {
-        "id": 5,
+        "id": 9,
         "title": "College Web App",
         "des": "A responsive educational platform that simplifies the study process for users.",
         "img": "/assets/college-project.webp",
         "link": "https://fr-fac-arts.vercel.app/"
       },
       {
-        "id": 6,
+        "id": 10,
         "title": "Bank Web App ReactJs",
         "des": "Modern banking web app built with ReactJs, Vite, and TailwindCSS, offering full responsiveness.",
         "img": "/assets/bank-app.webp",
         "link": "https://bank-web-silk.vercel.app/"
       },
       {
-        "id": 7,
+        "id": 11,
         "title": "Events App NextJs",
         "des": "A full-stack web app for managing and exploring events, with responsive design.",
         "img": "/assets/events-app.webp",
         "link": "https://events-app-next.vercel.app/"
       },
       {
-        "id": 8,
+        "id": 12,
         "title": "Dashboard Profile Web",
         "des": "Elegant dashboard built using HTML5, CSS3, and custom JS framework, fully responsive.",
         "img": "/assets/admin-dashboard-era.webp",
         "link": "https://dashboard-profle-web.vercel.app/"
       },
       {
-        "id": 9,
+        "id": 13,
         "title": "Personal Blog App",
         "des": "Minimalist and responsive personal blog crafted with JavaScript, HTML5, and CSS3.",
         "img": "/assets/era-web.webp",
         "link": "https://era-web-ten.vercel.app/"
       },
       {
-        "id": 10,
+        "id": 14,
         "title": "Bondi Theme Bootstrap 5",
         "des": "A responsive Bootstrap 5 theme designed with clean HTML5 and CSS3.",
         "img": "/assets/bondi-tem.webp",
         "link": "https://bondi-theme.vercel.app/"
       },
       {
-        "id": 11,
+        "id": 15,
         "title": "Modern E-Commerce ReactJs",
         "des": "An advanced e-commerce platform powered by ReactJs with Redux Toolkit (not responsive).",
         "img": "/assets/e-commerce.webp",
         "link": "https://modern-e-commerce-react.vercel.app/"
       },
       {
-        "id": 12,
+        "id": 16,
         "title": "Kasper Web App",
         "des": "Stylish and fully responsive web app developed with HTML5 and CSS.",
         "img": "/assets/kasper-web.webp",
